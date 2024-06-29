@@ -1,0 +1,914 @@
+body {
+  font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root {
+  --primary-color: #004e7c; /* Couleur principale */
+  --secondary-color: #f0f0f0; /* Couleur secondaire */
+  --text-color: #333; /* Couleur du texte */
+  --link-color: #007bff; /* Couleur des liens */
+  --hover-color: #0056b3; /* Couleur au survol des liens */
+}
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0, 0, 0, 0.322);
+  overflow-y: hidden;
+  transition: 0.6s;
+  backdrop-filter: blur(10px);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: var(--link-color);
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}/* fin de la superposition */
+
+
+/* propriete  du header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background: #ffffff33;
+  height: 70px;
+  /* background: rgba(255, 255, 255, 0.39); */
+ 
+}
+
+/* propriete du logo a droite  */
+.logo_congo{
+  width: 90px;
+  height: 40px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #888;
+  border-radius: 8px;
+}
+
+/* Icône du menu à droite */
+.menu_icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* pour cacher l'icon */
+.hide {
+  display: none !important;
+}
+
+/* propriete des liens */
+.content_lien_burger .liens {
+  display: flex;
+  gap: 70px;              /* Espace entre les liens */
+  margin-right: 20px;     /* Décale le groupe de liens vers la droite */
+}
+
+/* prioprite text  */
+.liens a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 6px 12px;      /* Un peu d'espace autour du texte */
+  border-radius: 4px;
+}
+
+/* la mise en forme des liens */
+.liens a:hover {
+  color: #007bff;
+  background: #f0f0f0;
+}
+
+/* proprite du conteneur des liens et du burger menu  */
+.content_lien_burger {
+  display: flex;
+  align-items: center;
+  gap: 90px; /* espace entre les liens et le burger */
+}
+
+
+
+
+/* propriete de la premiere section */
+.img-scroll{
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: url('/image/img9.jpg') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.img-scroll::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* ajuste ici l’opacité */
+  z-index: 1;
+}
+
+/* propriete pour les texts du img-scroll */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-text {
+  padding: 20px;
+} 
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+.hero-text p {
+  margin: 10px 0;
+}
+
+/* proprite du boutton dans la premiere section */
+.img-scroll button {
+  /* Design du bouton par défaut */
+  padding: 12px 28px; /* Augmenté pour un look plus moderne */
+  background-color: #f5f5f7; /* Fond blanc cassé (proche de la couleur de fond des sites Apple) */
+  border: 1px solid #d2d2d7; /* Bordure légère pour la définition */
+  color: #1d1d1f; /* Texte noir profond */
+  font-weight: 500; /* Poids de police légèrement moins gras pour la modernité */
+  font-size: 16px; /* Taille de police légèrement ajustée */
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px; /* Bords légèrement arrondis */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transition douce pour l'effet de survol */
+  /* Ombre subtile pour la profondeur */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.img-scroll button:hover {
+  /* Effet de survol */
+  background-color: #007bff; /* Bleu Apple vif pour le fond au survol */
+  color: #ffffff; /* Texte blanc au survol */
+  border-color: #007bff; /* Bordure de la même couleur que le fond au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légèrement plus prononcée au survol */
+}
+
+/* attribution du logo  */
+.logo_congo {
+  width: 70px;
+  height: 70px;
+  background: url('/image/R_2.jpeg') center/cover no-repeat;
+  border-radius: 50%;
+  margin-top: 0;
+}
+
+/* propriete de la ligne verticale*/
+.ligne_verticale {
+  display: inline-block;
+  width: 2px;
+  height: 40px;
+  background: #ccc;
+  margin: 0 18px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+/* propriete du texte a droite */
+.texte_droite {
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-right: 30px;
+}
+
+/* propriete du conteneur du logo et le reste de l'equipe */
+
+.content_logo_other {
+  display: flex;
+  align-items: center;
+  gap:3px;
+}
+
+/* redimensionnement des images */
+
+.icon-link {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
+
+/* definition des propriete de la seconde section */
+.intro {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.intro h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* rajout de ces lignes de code pour gerer le boutton ainsi que le responsible design */
+.intro {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 60px 40px; /* augmente les marges internes */
+  background-color: #fff;
+  gap: 20px; /* espace entre texte et bouton */
+  border-top: 0.5px solid rgba(0, 0, 0, 0.05); /* couleur subtile et fine */
+ /* optionnel : ligne de séparation subtile */
+}
+
+.intro .container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-button {
+  margin-top: 15px; 
+}
+
+.intro-button button {
+  padding: 12px 24px;
+  background-color: #004e7c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Adaptatif pour écran étroit */
+@media (max-width: 450px) {
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intro-button {
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+/* gestion du responsive design */
+/* Toujours afficher le burger menu */
+.menu_icon {
+  display: block;
+}
+/* Sur petit écran, cacher les liens du header */
+@media (max-width: 900px) {
+  .content_lien_burger .liens {
+    display: none;
+  }
+}
+
+
+/* Responsivité du logo et des éléments associés */
+@media (max-width: 600px) {
+  .content_logo_other {
+    gap: 8px;
+  }
+  .logo_congo {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    background-size: cover;
+  }
+  .ligne_verticale {
+    height: 25px;
+    margin: 0 8px;
+  }
+  .texte_droite {
+    font-size: 12px;
+    margin-right: 10px;
+    max-width: 120px;
+    /* Permet le retour à la ligne */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-word;
+    line-height: 1.2;
+  }
+}
+
+
+/* ajout de la deuxieme troisieme section qui contient la carte ainsi que les petite image */
+
+.map-gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;              /* ← Rapproche la carte et le texte */
+  background: #fff;
+  padding: 40px 30px;     /* ← Ajoute du padding sur les côtés */
+}
+
+.map-container {
+  flex: 1 1 42%;
+  min-width: 200px;
+  max-width: 42%;         /* ← Réduit la largeur pour rapprocher */
+  display: flex;
+  align-items: stretch;
+}
+
+
+.carte {
+  width: 100%;
+  height: 390px;          /* ← Hauteur réduite si besoin */
+  background: #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: stretch;
+  right: -5px; ;
+}
+
+.carte iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.map-side-text {
+  flex: 1 1 50%;
+  max-width: 50%;         /* ← Réduit la largeur pour rapprocher */
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+  padding: 32px 28px;
+  color: #1d1d1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 350px;
+  font-size: 1.15em;
+  line-height: 1.7;
+  margin-left: 0;
+}
+
+@media (max-width: 900px) {
+  .map-gallery {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0;
+  }
+  .map-container, .map-side-text {
+    max-width: 100%;
+    width: 100%;
+    min-width: unset;
+  }
+  .map-side-text {
+    padding: 20px 12px;
+    font-size: 1em;
+    min-height: 200px;
+  }
+  .carte {
+    height: 220px;
+  }
+}
+/* propriete pour le footer */
+.site-footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-social img {
+  width: 32px;      /* Choisis la taille souhaitée, ex : 32px */
+  height: 32px;
+  margin: 0 8px;    /* Espacement horizontal entre les icônes */
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.15); /* Effet zoom au survol, optionnel */
+}
+
+/* propriete de la mini carte */
+.carte iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* propriete de la deuxieme section nouvelle */
+/* ✅ STYLE GLOBAL DU BANDEAU */
+.promo-banner {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 24px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 97%; /* largeur du bloc promo réduite pour respirer */
+}
+
+/* ✅ CONTENU INTERNE ALIGNÉ EN LIGNE ET ESPACÉ */
+.promo-content {
+  max-width: 850px;
+  margin: auto;
+  display: flex;               /* aligne les enfants horizontalement */
+  justify-content: space-between; /* les place à gauche et droite */
+  align-items: center;
+  flex-wrap: wrap;             /* s’adapte si l’écran est étroit */
+  gap: 10px;
+  padding: 16px;
+}
+
+/* ✅ TEXTE À GAUCHE */
+.promo-text {
+  flex: 1;                    /* prend toute la largeur dispo à gauche */
+  text-align: left;
+  margin-right: auto;         /* colle le bloc à gauche */
+}
+
+
+/* ✅ IMAGE À DROITE */
+.promo-image {
+  flex-shrink: 0;             /* empêche de se réduire */
+  margin-left: auto;          /* colle l’image à droite */
+}
+
+/* ✅ TITRE DU BLOC PROMO */
+.promo-text h3 {
+  font-size: 1.6rem;
+  color: #004e7c;
+  margin-bottom: 10px;
+}
+
+/* ✅ SOUS-TITRE */
+.promo-text p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ✅ BOUTON D’ACTION */
+.promo-btn {
+  display: inline-block;
+  background-color: #004e7c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* ✅ HOVER SUR LE BOUTON */
+.promo-btn:hover {
+  background-color: #005a94;
+  border-color: #003d66;
+}
+
+/* ✅ STYLE DE L’IMAGE */
+.promo-image img {
+  width: 104px;
+  height: 104px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  display: block;
+}
+
+
+/* 🎯 RESPONSIVE pour les écrans ≤ 768px */
+@media (max-width: 768px) {
+  .promo-content {
+    flex-direction: column;      /* empile le texte et l’image verticalement */
+    align-items: flex-start;     /* aligne à gauche au lieu de centrer */
+    padding: 16px 10px;
+  }
+
+  .promo-text {
+    margin: 0;                   /* supprime les décalages personnalisés */
+    width: 100%;
+  }
+
+  .promo-image {
+    margin-left: 0;
+    margin-top: 15px;            /* petit espace au-dessus de l’image */
+    align-self: center;          /* centre l’image dans la colonne */
+  }
+
+  .promo-image img {
+    width: 90px;                 /* un peu plus petit sur mobile */
+    height: 90px;
+  }
+
+  .promo-btn {
+    width: 100%;                 /* bouton pleine largeur pour le confort mobile */
+    text-align: center;
+  }
+}
+
+
+/* propriete de la section contenant les 5 photos  */
+.image-grid {
+  max-width: 100%;                 /* prend toute la largeur dispo */
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Lignes d’images */
+.grid-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;              /* pour que les images restent sur une ligne */
+  justify-content: space-between;
+}
+
+/* Images – adaptables selon le nombre */
+.top-row img {
+  width: 48%; /* plus large avec marge contrôlée */
+}
+
+.bottom-row img {
+  width: 31.5%;
+}
+.grid-row img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  height: 240px; /* taille plus grande */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* ombre douce */
+  transition: transform 0.3s ease;
+}
+
+.grid-row img:hover {
+  transform: scale(1.03); /* zoom léger au survol */
+}
+
+/* 📱 Responsive mobile */
+
+@media (max-width: 768px) {
+  .top-row img,
+  .bottom-row img {
+    width: 100%;         /* empilement vertical */
+    height: auto;
+  }
+
+  .grid-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+/* propriete du titre avant les 5 images  */
+.image-grid-intro {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.image-grid-intro{
+  margin-left: 0px;
+}
+
+.image-grid-intro h2 {
+  font-size: 1.8rem;
+  color: #004e7c;
+  margin-bottom: 10px;
+}
+
+.image-grid-intro p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* propriete de la section des photos qui vont en auto scrolle vers la gauche */
+.infinite-slider {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fefefe;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 10); /* largeur = largeur img × nb images */
+  animation: scroll-left 30s linear infinite;
+}
+
+.slider-track img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Animation principale */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider-track img {
+    width: 160px;
+    height: 100px;
+  }
+}
+
+
+
+/* propriete de photos de 4s  */
+/* Container centré et overflow visible pour voir les slides sur les côtés */
+/* Container centré et overflow visible pour voir les slides sur les côtés */
+/* Simple carousel défilement droite vers gauche */
+/* Chronologie verticale façon Apple/WebKit */
+/* Animation image flottante dans la timeline */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  width: 100%;
+  max-width: unset;
+  min-height: 600px;             /* ← AJUSTE ICI la hauteur selon la taille de l'image */
+  background: #f8f9fa;
+  border: none;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;   /* ← place le contenu à gauche */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* propriete de l'image qui va  glisser */
+.timeline-float-img {
+  position: absolute;
+  top: 10px;
+  left: 100%;
+  width: 50%;
+  height: 100%;
+  opacity: 0.3; /* Opacité de départ réduite */
+  z-index: 10;
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: none;
+  object-fit: cover;
+}
+
+
+/* propriete du text se trouvant dans le mm bloc que timeline */
+
+.timeline-text-content {
+  position: absolute; /* Permet de le positionner précisément par rapport à son parent .timeline */
+  right: 0;           /* Se colle à l'extrême droite du conteneur parent */
+  width: 45%;         /* La largeur du bloc de texte, ajustez si besoin pour éviter les chevauchements */
+  padding: 20px;      /* Un peu de marge intérieure pour le texte */
+  opacity: 0;         /* Initialement invisible */
+  text-align: left;   /* Alignement du texte à gauche (plus lisible) */
+  color: #1d1d1f;     /* Couleur du texte */
+  font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  z-index: 15;        /* S'assure qu'il est au-dessus de l'image si besoin */
+
+  /* --- Mouvement et fondu : Les propriétés de transition pour un effet fluide --- */
+  transition: bottom 1.5s cubic-bezier(0.23, 1, 0.32, 1), /* Dure 1.5s, avec un effet d'accélération/décélération doux */
+              opacity 1s ease-in;                     /* Dure 1s, avec un léger délai au début du fondu */
+}
+
+/* --- Position INITIALE du texte (quand la classe 'visible' n'est PAS là) --- */
+/* C'est ce qui le fait "venir du bas" */
+.timeline-text-content:not(.visible) {
+    bottom: -150px; /* Positionne le texte 150px EN DESSOUS de la zone visible de la section.
+                       Ajustez cette valeur pour le cacher complètement. */
+}
+
+
+/* --- Position FINALE du texte (quand la classe 'visible' est ajoutée par JavaScript) --- */
+.timeline-text-content.visible {
+  bottom: 10%; /* Le texte monte et s'arrête à 10% du bas de la section .timeline */
+  opacity: 1;  /* Devient entièrement visible */
+}
+
+
+
+/* Styles pour le titre et paragraphe à l'intérieur du texte (inchangés) */
+.timeline-text-content h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.timeline-text-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .timeline {
+    max-width: 98vw;
+    min-height: 100px;
+  }
+  .timeline-float-img {
+    width: 90px;
+    height: 90px;
+    right: -120px;
+    left: auto;
+    top: 5px;
+  }
+  .timeline-float-img.visible {
+    right: auto;
+    left: 0;
+  }
+}
+
+
+/* propriete de whatsapp slide ajouter a mon site */
+.whatsapp-slider {
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%; /* 3 slides */
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.slide-text {
+  max-width: 500px;
+}
+
+.slide-text h2 {
+  font-size: 2rem;
+  color: #004e7c;
+  margin-bottom: 10px;
+}
+
+.slide-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.slide img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #004e7c;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slide img {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+
+

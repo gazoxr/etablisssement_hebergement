@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+        <link rel="icon" href="/image/R_2.jpeg" type="image/x-icon">
+    </head>
+    <title>Etablissemments_d'hebergement</title>
+    <body>
+
+        <header>
+        <div class="content_logo_other">
+                <!-- Espace réservé pour le logo -->
+                <div class="logo_congo"></div>
+
+                <!-- Petite ligne verticale de séparation -->
+                <span class="ligne_verticale"></span>
+
+                <!-- Texte à droite du logo -->
+                <span class="texte_droite">
+                    etablissement d'hébergement congo brazzaville
+                </span>
+        </div>
+
+
+            <!-- Liens à gauche du menu burger -->
+            <div class="content_lien_burger">
+                <nav class="liens">
+                    <a href="#"><img src="/icons/home_4367324.png" alt="Accueil" class="icon-link">Accueil</a>
+                    <a href="#"><img src="/icons/street-map_1072487.png" alt="Accueil" class="icon-link">Carte</a>
+                </nav>
+                <span class="menu_icon" onclick="openNav()">&#9776;</span>
+            </div>
+
+
+            <!-- Icône du menu à droite -->
+            <!--ce qui fait apparaitre le taksbar-->
+            <!-- <span class="menu_icon" onclick="openNav()">&#9776;</span> -->
+        </header>
+            <section class="img-scroll">
+                <div class="hero-text">
+                    <h1> Explorez Brazzaville autrement  votre guide des hébergements</h1>
+                    <p>Une approche pragmatique de la gestion RH</p>
+                    <button>voir +</button>
+                </div>
+            </section>
+        
+        <!-- nouvelle section  -->
+        <section class="promo-banner">
+
+            <div class="promo-content">
+              <div class="promo-text">
+                <h3>Petite escapade, véritable évasion</h3>
+                <p>Économisez jusqu'à 20 % avec une Offre Saisonnière.</p>
+                <a class="promo-btn" href="https://www.booking.com/dealspage.fr.html" target="_blank">Économiser</a>
+              </div>
+              <div class="promo-image">
+                <img src="https://q-xx.bstatic.com/xdata/images/xphoto/248x248/468828542.jpeg?k=b51cb74f05db0ebc1a1cbcca384fa2ee8c4d6c0b5fd089a15b1fd14a107ccab4&o=" alt="Deux personnes s'appuient sur le bord d'un bateau et sourient au soleil.">
+              </div>
+            </div>
+        </section>
+
+
+        <!-- ceci est la deuxienme section du site -->
+        <section class="intro">
+          <div class="container">
+            <h2>Notre Mission</h2>
+            <p>
+              Nous accompagnons les entreprises dans la structuration et la transformation de leur fonction RH avec une expertise humaine et opérationnelle.
+            </p>
+          </div>
+
+          <div class="intro-button">
+                  <button>Ma carte</button>
+          </div>
+        </section>
+
+
+        <!-- definition de la superposition navbar -->
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#">    
+                    <img src="/icons/home_4367324.png" alt="Accueil" class="icon-link">Accueil
+                </a>
+                <a href="#">
+                    <img src="/icons/street-map_1072487.png" alt="Carte" class="icon-link">Carte
+                </a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>      
+       
+        <!-- cette section concerne la partie du design de celui de whatsapp clique -->
+        <section class="whatsapp-slider">
+            <div class="slider-container">
+              <div class="slide">
+                <div class="slide-text">
+                  <h2>Discuter en toute simplicité</h2>
+                  <p>WhatsApp vous connecte instantanément avec vos proches, où que vous soyez.</p>
+                </div>
+                <img src="/image/img1.jpg" alt="Slide 1">
+              </div>
+              <div class="slide">
+                <div class="slide-text">
+                  <h2>Partagez vos moments</h2>
+                  <p>Envoyez des photos, vidéos et documents en un clin d’œil.</p>
+                </div>
+                <img src="/image/img2.jpg" alt="Slide 2">
+              </div>
+              <div class="slide">
+                <div class="slide-text">
+                  <h2>Restez connecté</h2>
+                  <p>Appelez gratuitement vos proches, même à l’autre bout du monde.</p>
+                </div>
+                <img src="/image/img3.jpg" alt="Slide 3">
+              </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </section>
+        <!-- cette section est  concerne les cinq photos avant la mini carte-->
+
+        <div class="image-grid">
+            <div class="image-grid-intro">
+                <h2>Nos hébergements en lumière</h2>
+                <p>Découvrez une sélection chaleureuse d’établissements pour vos séjours à Brazzaville.</p>
+            </div>
+            <div class="grid-row top-row">
+              <img src="/image/img1.jpg" alt="Image 1">
+              <img src="/image/img2.jpg" alt="Image 2">
+            </div>
+            <div class="grid-row bottom-row">
+              <img src="/image/img3.jpg" alt="Image 3">
+              <img src="/image/img4.jpg" alt="Image 4">
+              <img src="/image/img5.jpg" alt="Image 5">
+            </div>
+          </div>
+
+
+
+        <!-- cette section concerne les photos qui vont se deplacer vers la gauche en 4s -->
+        <section class="timeline">
+            <img src="/image/img8.jpg" alt="Décor timeline" class="timeline-float-img">
+            
+            <div class="timeline-text-content">
+                <h2>Votre Titre Ici lo</h2>
+                <p>Ceci est votre texte qui apparaîtra du côté droit. Il peut contenir des informations pertinentes sur votre section timeline, des descriptions, ou tout autre contenu que vous souhaitez mettre en avant après l'animation de l'image.   
+                </p>
+                <p>L'idée est de créer une séquence visuelle où l'image se place d'abord, puis le texte arrive en douceur pour compléter l'information.
+                </p>
+            </div>
+        </section>
+
+        <!-- cette section concerne les photos qui iront en auto scrolle vers la gauche -->
+        
+        <!-- cette section gere la mini carte ainsi que les mini photos -->
+        <section class="map-gallery">
+          <div class="map-container">
+            <!-- Ta carte interactive ira ici -->
+            <div class="carte">
+                    <iframe src="/Hotel_web/index.html"></iframe>
+                </div>
+
+            </div>
+            
+            <!-- inserssion des hotels  -->
+            <div class="map-side-text">
+              <h3>Votre titre moderne ici</h3>
+              <p>
+                Ce texte accompagne la carte. Il peut contenir une description, des informations pratiques, ou tout autre contenu utile pour l’utilisateur.
+              </p>
+              <p>
+                Ajoutez plusieurs paragraphes si besoin, le tout restera bien aligné et lisible.
+              </p>
+            </div>  
+          </section>
+          <div class="infinite-slider">
+                <div class="image-grid-intro">
+                    <h2>Nos hébergements en lumière</h2>
+                    <p>Découvrez une sélection chaleureuse d’établissements pour vos séjours à Brazzaville.</p>
+                </div>
+                <div class="slider-track">
+                  <img src="/image/img1.jpg" alt="Image 1">
+                  <img src="/image/img2.jpg" alt="Image 2">
+                  <img src="/image/img3.jpg" alt="Image 3">
+                  <img src="/image/img4.jpg" alt="Image 4">
+                  <img src="/image/img5.jpg" alt="Image 5">
+                  <!-- doublé pour boucle fluide -->
+                  <img src="/image/img1.jpg" alt="Image 1 bis">
+                  <img src="/image/img2.jpg" alt="Image 2 bis">
+                  <img src="/image/img3.jpg" alt="Image 3 bis">
+                  <img src="/image/img4.jpg" alt="Image 4 bis">
+                  <img src="/image/img5.jpg" alt="Image 5 bis">
+                </div>
+          </div>
+
+      <!-- definition de la page java script -->
+      <script src="/js/script.js"></script>
+      <script src="/js/slideWh.js"></script>
+      <script src="/js/slideFour.js"></script>
+      <footer class="site-footer">
+
+      <div class="footer-container">   
+        <ul class="footer-links">
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+          <div class="footer-social">
+              <a href="#"><img src="/icons/facebook_2190355.png" alt="Facebook"></a>
+              <a href="#"><img src="/icons/twitter_1400854.png" alt="Twitter"></a>
+              <a href="#"><img src="/icons/instagram_408758.png" alt="Instagram"></a>
+              <p>&copy; 2025 Établissements d’hébergement | DGTH. Tous droits réservés.</p>
+              <p>__Congo Brazzaville___</p> 
+      </div>
+        </footer>
+    </body>
+</html>
