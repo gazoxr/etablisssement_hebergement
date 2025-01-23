@@ -1,10 +1,11 @@
 body, html {
   overflow-x: hidden;
   max-width: 100vw;
+  
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   padding-top: 90px; /* Ajuste selon la hauteur réelle du header */
@@ -60,15 +61,6 @@ body {
   font-size: 60px;
 }
 
-@media screen and (max-height: 450px) {
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}/* fin de la superposition */
 
 
 /* propriete  du header */
@@ -99,56 +91,7 @@ body {
   padding-top: 80px; /* Ajuste selon la hauteur réelle du header */
 }
 
-/* Responsive : header plus compact sur tablette/mobile */
-@media (max-width: 900px) {
-  header {
-    width: 99vw;
-    max-width: 99vw;
-    margin: 0.5vw auto;
-    padding: 8px 8px;
-    border-radius: 24px;
-  }
-  body {
-    padding-top: 64px;
-  }
-}
 
-/* Responsive : header en colonne sur très petit écran */
-@media (max-width: 600px) {
-  header {
-    position: static;           /* Header normal, non fixe */
-    display: flex;
-    flex-direction: row;        /* Logo à gauche, menu à droite */
-    align-items: center;
-    justify-content: space-between;
-    width: 100vw;
-    max-width: 100vw;
-    min-width: 0;
-    margin: 0;
-    padding: 6px 8px;           /* Padding réduit pour mobile */
-    border-radius: 12px;
-    box-sizing: border-box;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(8px);
-  }
-  body {
-    padding-top: 0;             /* Plus de compensation pour header fixe */
-  }
-  .logo_congo {
-    margin: 0;
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    min-height: 36px;
-    border-radius: 8px;
-  }
-  .menu_icon {
-    font-size: 28px;
-    margin-left: auto;
-    margin-right: 0;
-    display: block;
-  }
-}
 
 /* propriete du logo a droite  */
 .logo_congo{
@@ -394,85 +337,6 @@ body {
   transform: translateY(-2px) scale(1.04);
 }
 
-/* Responsive : bouton large et centré sur mobile */
-@media (max-width: 700px) {
-  .intro-btn {
-    width: 90%;
-    max-width: 320px;
-    display: block;
-    margin: 0 auto;
-    font-size: 1em;
-    padding: 12px 0;
-  }
-}
-
-/* Adaptatif pour écran étroit */
-@media (max-width: 450px) {
-  .intro {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .intro-button {
-    text-align: left;
-    margin-top: 20px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 700px) {
-  .intro-btn {
-    width: 90%;
-    max-width: 320px;
-    display: block;
-    margin: 0 auto;
-    font-size: 1em;
-    padding: 12px 0;
-  }
-}
-
-/* gestion du responsive design */
-/* Toujours afficher le burger menu */
-.menu_icon {
-  display: block;
-}
-/* Sur petit écran, cacher les liens du header */
-@media (max-width: 900px) {
-  .content_lien_burger .liens {
-    display: none;
-  }
-}
-
-
-/* Responsivité du logo et des éléments associés */
-@media (max-width: 600px) {
-  .content_logo_other {
-    gap: 8px;
-  }
-  .logo_congo {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    background-size: cover;
-  }
-  .ligne_verticale {
-    height: 25px;
-    margin: 0 8px;
-  }
-  .texte_droite {
-    font-size: 12px;
-    margin-right: 10px;
-    max-width: 120px;
-    /* Permet le retour à la ligne */
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
-    word-break: break-word;
-    line-height: 1.2;
-  }
-}
-
 
 /* ajout de la deuxieme troisieme section qui contient la carte ainsi que les petite image */
 
@@ -529,49 +393,6 @@ body {
   font-size: 1.15em;
   line-height: 1.7;
   margin-left: 0;
-}
-
-@media (max-width: 900px) {
-  .map-gallery {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 6px;
-  }
-  .map-container,
-  .map-side-text {
-    max-width: 100%;
-    width: 100%;
-    min-width: unset;
-    box-sizing: border-box;
-  }
-  .map-side-text {
-    padding: 18px 8px;
-    font-size: 1em;
-    min-height: 180px;
-  }
-  .carte {
-    height: 330px;
-  }
-}
-@media (max-width: 900px) {
-  .map-gallery {
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px 0;
-  }
-  .map-container, .map-side-text {
-    max-width: 100%;
-    width: 100%;
-    min-width: unset;
-  }
-  .map-side-text {
-    padding: 20px 12px;
-    font-size: 1em;
-    min-height: 200px;
-  }
-  .carte {
-    height: 500px;
-  }
 }
 /* propriete pour le footer */
 .site-footer {
@@ -714,62 +535,6 @@ body {
 }
 
 
-/* 🎯 RESPONSIVE pour les écrans ≤ 768px */
-@media (max-width: 768px) {
-  .promo-content {
-    flex-direction: column;      /* empile le texte et l’image verticalement */
-    align-items: flex-start;     /* aligne à gauche au lieu de centrer */
-    padding: 16px 10px;
-  }
-
-  .promo-text {
-    margin: 0;                   /* supprime les décalages personnalisés */
-    width: 100%;
-  }
-
-  .promo-image {
-    margin-left: 0;
-    margin-top: 15px;            /* petit espace au-dessus de l’image */
-    align-self: center;          /* centre l’image dans la colonne */
-  }
-
-  .promo-image img {
-    width: 90px;                 /* un peu plus petit sur mobile */
-    height: 90px;
-  }
-
-  .promo-btn {
-    width: 100%;                 /* bouton pleine largeur pour le confort mobile */
-    text-align: center;
-  }
-}
-
-@media (max-width: 700px) {
-  .promo-content {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px 4px;
-  }
-  .promo-text {
-    width: 100%;
-    margin-right: 0;
-    text-align: center;
-  }
-  .promo-image {
-    margin-left: 0;
-    margin-top: 12px;
-    align-self: center;
-  }
-  .promo-image img {
-    width: 80px;
-    height: 80px;
-  }
-  .promo-btn {
-    width: 100%;
-    padding: 12px 0;
-    font-size: 1em;
-  }
-}
 
 
 /* propriete de la section contenant les 5 photos  */
@@ -812,20 +577,6 @@ body {
   transform: scale(1.03); /* zoom léger au survol */
 }
 
-/* 📱 Responsive mobile */
-
-@media (max-width: 768px) {
-  .top-row img,
-  .bottom-row img {
-    width: 100%;         /* empilement vertical */
-    height: auto;
-  }
-
-  .grid-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
 
 
 /* propriete du titre avant les 5 images  */
@@ -878,23 +629,7 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-/* Animation principale */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
-/* Responsive */
-@media (max-width: 768px) {
-  .slider-track img {
-    width: 160px;
-    height: 100px;
-  }
-}
 
 
 
@@ -914,52 +649,44 @@ body {
   border: none;
   padding: 60px 20px;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;   /* ← place le contenu à gauche */
-  box-sizing: border-box;
-  overflow: hidden;
+  align-items: center;      /* Centre verticalement */
+  justify-content: center;  /* Centre horizontalement */
+  min-height: 400px;        /* Ajuste selon ta hauteur souhaitée */
+  position: relative;
 }
 
 /* propriete de l'image qui va  glisser */
 
 .timeline-text-content {
-  position: absolute;
-  top: 10%;
-  right: 0;
+  position: relative;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%); /* Centre le texte */
   width: 45%;
   padding: 20px;
+  margin:auto;
   opacity: 1;
-  text-align: left;
+  text-align: center; /* Centre tout le texte */
   color: #1d1d1f;
   font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   z-index: 15;
   transition: none;
+  bottom: auto;
 }
 
-/* propriete du text se trouvant dans le mm bloc que timeline */
-
-.timeline-text-content {
-  position: absolute;
-  top: 10%;
-  right: 0;
-  width: 45%;
-  padding: 20px;
-  opacity: 1; /* Toujours visible */
-  text-align: left;
-  color: #1d1d1f;
-  font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  z-index: 15;
-  transition: none; /* SUPPRIME l'animation */
-  bottom: auto;     /* Ne pas utiliser bottom pour l'animation */
+/* Styles pour le titre et paragraphe à l'intérieur du texte */
+.timeline-text-content h2,
+.timeline-text-content p {
+  text-align: center; /* Centre aussi les titres et paragraphes */
 }
 
 /* Supprimez ou videz ces règles */
-.timeline-text-content:not(.visible),
+/* .timeline-text-content:not(.visible),
 .timeline-text-content.visible {
   right: 0;
   opacity: 1;
   bottom: auto;
-}
+} */
 
 /* --- Position INITIALE du texte (quand la classe 'visible' n'est PAS là) --- */
 /* C'est ce qui le fait "venir du bas" */
@@ -988,17 +715,6 @@ body {
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 10px;
-}
-
-
-@media (max-width: 700px) {
-  .timeline-float-img{
-    width: 140px;
-    height: 140px;
-    left: 0;
-    right: auto;
-    top: 5px;
-  }
 }
 
 
@@ -1055,12 +771,12 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #004e7c;
-  color: white;
+  background: #004e7c4d;
+  color: var(--primary-color);
   border: none;
-  font-size: 2rem;
+  font-size: 1.3rem;
   padding: 10px 16px;
-  border-radius: 50%;
+  border-radius: 90%;
   cursor: pointer;
   z-index: 10;
 }
@@ -1068,7 +784,87 @@ body {
 .prev { left: 20px; }
 .next { right: 20px; }
 
+/* === IMAGE TIMELINE OCCUPE TOUTE LA MOITIÉ DROITE === */
+.timeline-float-img {
+  position: absolute;
+  top: 0;
+  right: 0;           /* Colle l'image à droite */
+  left: auto;
+  width: 50%;         /* Prend 50% du parent */
+  height: 100%;       /* Prend toute la hauteur du parent */
+  min-height: 300px;  /* Hauteur minimale pour éviter qu'elle soit trop petite */
+  opacity: 1;
+  z-index: 10;
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: none;
+  object-fit: cover;  /* Remplit tout l'espace sans déformation */
+  transition: none;   /* Pas d'animation */
+}
+
+
+
+/* 🎯 RESPONSIVE pour les écrans ≤ 768px */
+/* media querry qui de la section qui possede le boutton economiser */
 @media (max-width: 768px) {
+  .promo-content {
+    flex-direction: column;      /* empile le texte et l’image verticalement */
+    align-items: flex-start;     /* aligne à gauche au lieu de centrer */
+    padding: 16px 10px;
+  }
+
+  .promo-text {
+    margin: 0;                   /* supprime les décalages personnalisés */
+    width: 100%;
+  }
+
+  .promo-image {
+    margin-left: 0;
+    margin-top: 15px;            /* petit espace au-dessus de l’image */
+    align-self: center;          /* centre l’image dans la colonne */
+  }
+
+  .promo-image img {
+    width: 90px;                 /* un peu plus petit sur mobile */
+    height: 90px;
+  }
+
+  .promo-btn {
+    width: 100%;                 /* bouton pleine largeur pour le confort mobile */
+    text-align: center;
+  }
+}
+/*  */
+@media (max-width: 700px) {
+  .promo-content {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 4px;
+  }
+  .promo-text {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  .promo-image {
+    margin-left: 0;
+    margin-top: 12px;
+    align-self: center;
+  }
+  .promo-image img {
+    width: 80px;
+    height: 80px;
+  }
+  .promo-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1em;
+  }
+}
+
+/* media querry qui de la section qui possede le boutton economiser pour une taille differente*/
+/* media querry de whatsapp slide avec direction a fleche */
+@media (max-width: 450px) {
   .slide {
     flex-direction: column;
     text-align: center;
@@ -1080,7 +876,8 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+/* media querry de la 3eme section  */
+@media (max-width: 450px) {
   .intro {
     flex-direction: column;
     align-items: center;
@@ -1102,35 +899,24 @@ body {
   }
 }
 
-/* === IMAGE TIMELINE OCCUPE TOUTE LA MOITIÉ DROITE === */
-.timeline-float-img {
-  position: absolute;
-  top: 0;
-  right: 0;           /* Colle l'image à droite */
-  left: auto;
-  width: 50%;         /* Prend 50% du parent */
-  height: 100%;       /* Prend toute la hauteur du parent */
-  min-height: 300px;  /* Hauteur minimale pour éviter qu'elle soit trop petite */
-  opacity: 1;
-  z-index: 10;
-  background: transparent;
-  border-radius: 10px;
-  box-shadow: none;
-  object-fit: cover;  /* Remplit tout l'espace sans déformation */
-  transition: none;   /* Pas d'animation */
+/* 📱  media querry des cinq photos contenu dans la page*/
+
+@media (max-width: 768px) {
+  .top-row img,
+  .bottom-row img {
+    width: 100%;         /* empilement vertical */
+    height: auto;
+  }
+
+  .grid-row {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
-/* === RESPONSIVE : image plus petite et adaptée sur mobile === */
-@media (max-width: 900px) {
-  .timeline-float-img {
-    position: static;     /* Sort du flux absolu pour s'empiler */
-    width: 100%;
-    height: 220px;
-    min-height: 120px;
-    border-radius: 10px;
-    margin: 0 auto 18px auto;
-    display: block;
-  }
+
+/* div de la page ayant uniquement du texte dans la div */
+@media (max-width: 450px) {
   .timeline {
     flex-direction: column;
     min-height: unset;
@@ -1145,5 +931,254 @@ body {
     right: unset;
   }
 }
+/* media qui concerne la section de la mini carte  */
+@media (max-width: 900px) {
+  .map-gallery {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 6px;
+  }
+  .map-container,
+  .map-side-text {
+    max-width: 100%;
+    width: 100%;
+    min-width: unset;
+    box-sizing: border-box;
+  }
+  .map-side-text {
+    padding: 18px 8px;
+    font-size: 1em;
+    min-height: 180px;
+  }
+  .carte {
+    height: 330px;
+  }
+}
+/* media qui concerne la section de la mini carte pour une taille differente */
+@media (max-width: 900px) {
+  .map-gallery {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0;
+  }
+  .map-container, .map-side-text {
+    max-width: 100%;
+    width: 100%;
+    min-width: unset;
+  }
+  .map-side-text {
+    padding: 20px 12px;
+    font-size: 1em;
+    min-height: 200px;
+  }
+  .carte {
+    height: 500px;
+  }
+}
 
 
+/* media querry pour arranger la forme des bouttons pour le text 'notre mission...'*/
+@media (max-width: 700px) {
+  .intro-btn {
+    width: 90%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 12px 0;
+  }
+}
+
+/* media pour le text de ' notre mission...'  */
+@media (max-width: 450px) {
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intro-button {
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+/* media pour le text de ' notre mission...'  et le boutton de cette div pour une taille differente */
+@media (max-width: 700px) {
+  .intro-btn {
+    width: 90%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 12px 0;
+  }
+}
+
+/* gestion du responsive design */
+/* Toujours afficher le burger menu */
+/* media querry pour header , pour cacher les liens et les placer dans le navbar */
+@media (max-width: 900px) {
+  .content_lien_burger .liens {
+    display: none;
+  }
+}
+.menu_icon {
+  display: block;
+}
+
+
+
+
+/* media querry du logo et des éléments associés qui concerne le header */
+@media (max-width: 600px) {
+  .content_logo_other {
+    gap: 8px;
+  }
+  .logo_congo {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    background-size: cover;
+  }
+  .ligne_verticale {
+    height: 25px;
+    margin: 0 8px;
+  }
+  .texte_droite {
+    font-size: 12px;
+    margin-right: 10px;
+    max-width: 120px;
+    /* Permet le retour à la ligne */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-word;
+    line-height: 1.2;
+  }
+}
+/* media querry pour la section 6 'Destination de reve.....' */
+@media (min-width: 450px) {
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centre verticalement */
+    justify-content: center;  /* Centre horizontalement */
+    padding: 30px 8px;
+    min-height: unset;
+  }
+  .timeline-text-content {
+    position: static;
+    width: 100%;
+    max-width: 95vw;
+    margin: 0 auto;
+    padding: 12px 4px;
+    text-align: center;       /* Centre le texte */
+    top: unset;
+    left: unset;
+    right: unset;
+    transform: none;
+  }
+}
+/* media querry de la section 6 'Destination de reve.....' pour une taille differente */
+@media (max-width: 450px) {
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centre verticalement */
+    justify-content: center;  /* Centre horizontalement */
+    padding: 30px 8px;
+    min-height: unset;
+  }
+  .timeline-text-content {
+    position: static;
+    width: 100%;
+    max-width: 95vw;
+    margin: 0 auto;
+    padding: 12px 4px;
+    text-align: center;       /* Centre le texte */
+    top: unset;
+    left: unset;
+    right: unset;
+    transform: none;
+  }
+}
+/* media query pour la superposition */
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}/* fin de la superposition */
+/* Responsive : header plus compact sur tablette/mobile */
+@media (max-width: 900px) {
+  header {
+    width: 99vw;
+    max-width: 99vw;
+    margin: 0.5vw auto;
+    padding: 8px 8px;
+    border-radius: 24px;
+  }
+  body {
+    padding-top: 64px;
+  }
+}
+
+/* Responsive : header en colonne sur très petit écran */
+@media (max-width: 600px) {
+  header {
+    position: static;           /* Header normal, non fixe */
+    display: flex;
+    flex-direction: row;        /* Logo à gauche, menu à droite */
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    margin: 0;
+    padding: 6px 8px;           /* Padding réduit pour mobile */
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+  }
+  body {
+    padding-top: 0;             /* Plus de compensation pour header fixe */
+  }
+  .logo_congo {
+    margin: 0;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 8px;
+  }
+  .menu_icon {
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+  }
+}
+/* Animation principale des images qui vont en auto scroll*/
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive pour les images qui vont en auto scroll*/
+@media (max-width: 768px) {
+  .slider-track img {
+    width: 160px;
+    height: 100px;
+  }
+}
