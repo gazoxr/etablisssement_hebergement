@@ -36,6 +36,30 @@
             background-color: rgba(255,255,255,.4) !important;
             padding: 2px !important;
         } 
+        .back-btn {
+  position: absolute;
+  top: 260px;
+  left: 18px;
+  z-index: 1001;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.397); /* Fond blanc transparent */
+  color: #004e7c;                   /* Texte bleu pour rester visible */
+  font-size: 1em;
+  padding: 10px 24px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, color 0.2s;
+}
+.back-btn:hover,
+.back-btn:focus {
+  background: rgba(255,255,255,0.95); /* Plus opaque au survol */
+  color: #0074c2;
+  transform: translateY(-2px) scale(1.04);
+}
         </style>
 
         <style>
@@ -49,6 +73,9 @@
         <title></title>
     </head>
     <body>
+        <a href="javascript:history.back()" class="back-btn">
+            <img src="/icons/icons8-back-64.png" alt="Retour" style="height:20px;vertical-align:middle;margin-right:8px;">
+         </a>
         <div id="map">
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
