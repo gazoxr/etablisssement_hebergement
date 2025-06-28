@@ -1,8 +1,15 @@
+body, html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  padding-top: 90px; /* Ajuste selon la hauteur réelle du header */
 }
+
 :root {
   --primary-color: #004e7c; /* Couleur principale */
   --secondary-color: #f0f0f0; /* Couleur secondaire */
@@ -10,6 +17,7 @@ body {
   --link-color: #007bff; /* Couleur des liens */
   --hover-color: #0056b3; /* Couleur au survol des liens */
 }
+
 .overlay {
   height: 0%;
   width: 100%;
@@ -65,14 +73,81 @@ body {
 
 /* propriete  du header */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98vw;                /* Largeur adaptée à tous les écrans */
+  max-width: 1200px;          /* Largeur max pour éviter l'étirement sur très grand écran */
+  margin: 1vw auto;           /* Centre le header horizontalement */
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.85); /* Fond blanc semi-transparent */
+  backdrop-filter: blur(10px);        /* Effet de flou sur ce qui passe derrière */
+  -webkit-backdrop-filter: blur(10px);/* Pour Safari */
+  border-radius: 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 10px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
-  background: #ffffff33;
-  height: 70px;
-  /* background: rgba(255, 255, 255, 0.39); */
- 
+  transition: box-shadow 0.2s, background 0.2s;
+  box-sizing: border-box;     /* Pour que padding ne fasse pas déborder */
+}
+
+/* Pour éviter que le contenu passe sous le header fixe */
+body {
+  padding-top: 80px; /* Ajuste selon la hauteur réelle du header */
+}
+
+/* Responsive : header plus compact sur tablette/mobile */
+@media (max-width: 900px) {
+  header {
+    width: 99vw;
+    max-width: 99vw;
+    margin: 0.5vw auto;
+    padding: 8px 8px;
+    border-radius: 24px;
+  }
+  body {
+    padding-top: 64px;
+  }
+}
+
+/* Responsive : header en colonne sur très petit écran */
+@media (max-width: 600px) {
+  header {
+    position: static;           /* Header normal, non fixe */
+    display: flex;
+    flex-direction: row;        /* Logo à gauche, menu à droite */
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    margin: 0;
+    padding: 6px 8px;           /* Padding réduit pour mobile */
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+  }
+  body {
+    padding-top: 0;             /* Plus de compensation pour header fixe */
+  }
+  .logo_congo {
+    margin: 0;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 8px;
+  }
+  .menu_icon {
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+  }
 }
 
 /* propriete du logo a droite  */
@@ -143,7 +218,7 @@ header {
   justify-content: center;
   text-align: center;
   color: white;
-  background: url('/image/img9.jpg') center/cover no-repeat;
+  background: url('/image/mikhel/96351018.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -177,27 +252,27 @@ header {
 
 /* proprite du boutton dans la premiere section */
 .img-scroll button {
-  /* Design du bouton par défaut */
-  padding: 12px 28px; /* Augmenté pour un look plus moderne */
-  background-color: #f5f5f7; /* Fond blanc cassé (proche de la couleur de fond des sites Apple) */
-  border: 1px solid #d2d2d7; /* Bordure légère pour la définition */
-  color: #1d1d1f; /* Texte noir profond */
-  font-weight: 500; /* Poids de police légèrement moins gras pour la modernité */
-  font-size: 16px; /* Taille de police légèrement ajustée */
-  cursor: pointer;
+  display: inline-block;
+  background: var(--secondary-color);         /* même couleur que .promo-btn */
+  color: var(--primary-color);
+  font-size: 1.1em;
+  padding: 12px 32px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: none;
   margin-top: 20px;
-  border-radius: 8px; /* Bords légèrement arrondis */
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transition douce pour l'effet de survol */
-  /* Ombre subtile pour la profondeur */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
-.img-scroll button:hover {
-  /* Effet de survol */
-  background-color: #007bff; /* Bleu Apple vif pour le fond au survol */
-  color: #ffffff; /* Texte blanc au survol */
-  border-color: #007bff; /* Bordure de la même couleur que le fond au survol */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légèrement plus prononcée au survol */
+
+.img-scroll button:hover,
+.img-scroll button:focus {
+  background: var(--primary-color);         /* couleur hover identique à .promo-btn */
+  color:var(--secondary-color) ;
+  transform: translateY(-2px) scale(1.04);
 }
 
 /* attribution du logo  */
@@ -291,17 +366,44 @@ header {
 }
 
 .intro-button {
-  margin-top: 15px; 
+  width: 100%;
+  text-align: center;
+  margin-top: 18px;
 }
 
-.intro-button button {
-  padding: 12px 24px;
-  background-color: #004e7c;
-  color: white;
+.intro-btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 1.1em;
+  padding: 12px 32px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  margin: 0 auto;
   cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.intro-btn:hover,
+.intro-btn:focus {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Responsive : bouton large et centré sur mobile */
+@media (max-width: 700px) {
+  .intro-btn {
+    width: 90%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 12px 0;
+  }
 }
 
 /* Adaptatif pour écran étroit */
@@ -315,6 +417,17 @@ header {
     text-align: left;
     margin-top: 20px;
     width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .intro-btn {
+    width: 90%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 12px 0;
   }
 }
 
@@ -421,6 +534,28 @@ header {
 @media (max-width: 900px) {
   .map-gallery {
     flex-direction: column;
+    gap: 20px;
+    padding: 20px 6px;
+  }
+  .map-container,
+  .map-side-text {
+    max-width: 100%;
+    width: 100%;
+    min-width: unset;
+    box-sizing: border-box;
+  }
+  .map-side-text {
+    padding: 18px 8px;
+    font-size: 1em;
+    min-height: 180px;
+  }
+  .carte {
+    height: 330px;
+  }
+}
+@media (max-width: 900px) {
+  .map-gallery {
+    flex-direction: column;
     gap: 30px;
     padding: 20px 0;
   }
@@ -435,11 +570,12 @@ header {
     min-height: 200px;
   }
   .carte {
-    height: 220px;
+    height: 500px;
   }
 }
 /* propriete pour le footer */
 .site-footer {
+  width : 100%;
   background-color: var(--primary-color);
   color: white;
   padding: 30px 20px;
@@ -453,6 +589,7 @@ header {
 }
 
 .footer-links {
+
   list-style: none;
   padding: 0;
   margin-top: 10px;
@@ -546,20 +683,24 @@ header {
 /* ✅ BOUTON D’ACTION */
 .promo-btn {
   display: inline-block;
-  background-color: #004e7c;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 1.1em;
+  padding: 12px 32px;
+  border-radius: 25px;
   text-decoration: none;
-  font-weight: bold;
-  border: 1px solid transparent;
-  transition: background-color 0.3s, border-color 0.3s;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 18px;
+  cursor: pointer;
 }
 
 /* ✅ HOVER SUR LE BOUTON */
 .promo-btn:hover {
-  background-color: #005a94;
-  border-color: #003d66;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px) scale(1.04);
 }
 
 /* ✅ STYLE DE L’IMAGE */
@@ -600,6 +741,33 @@ header {
   .promo-btn {
     width: 100%;                 /* bouton pleine largeur pour le confort mobile */
     text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .promo-content {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 4px;
+  }
+  .promo-text {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  .promo-image {
+    margin-left: 0;
+    margin-top: 12px;
+    align-self: center;
+  }
+  .promo-image img {
+    width: 80px;
+    height: 80px;
+  }
+  .promo-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1em;
   }
 }
 
@@ -753,37 +921,44 @@ header {
 }
 
 /* propriete de l'image qui va  glisser */
-.timeline-float-img {
-  position: absolute;
-  top: 10px;
-  left: 100%;
-  width: 50%;
-  height: 100%;
-  opacity: 0.3; /* Opacité de départ réduite */
-  z-index: 10;
-  background: transparent;
-  border-radius: 10px;
-  box-shadow: none;
-  object-fit: cover;
-}
 
+.timeline-text-content {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 45%;
+  padding: 20px;
+  opacity: 1;
+  text-align: left;
+  color: #1d1d1f;
+  font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  z-index: 15;
+  transition: none;
+}
 
 /* propriete du text se trouvant dans le mm bloc que timeline */
 
 .timeline-text-content {
-  position: absolute; /* Permet de le positionner précisément par rapport à son parent .timeline */
-  right: 0;           /* Se colle à l'extrême droite du conteneur parent */
-  width: 45%;         /* La largeur du bloc de texte, ajustez si besoin pour éviter les chevauchements */
-  padding: 20px;      /* Un peu de marge intérieure pour le texte */
-  opacity: 0;         /* Initialement invisible */
-  text-align: left;   /* Alignement du texte à gauche (plus lisible) */
-  color: #1d1d1f;     /* Couleur du texte */
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 45%;
+  padding: 20px;
+  opacity: 1; /* Toujours visible */
+  text-align: left;
+  color: #1d1d1f;
   font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  z-index: 15;        /* S'assure qu'il est au-dessus de l'image si besoin */
+  z-index: 15;
+  transition: none; /* SUPPRIME l'animation */
+  bottom: auto;     /* Ne pas utiliser bottom pour l'animation */
+}
 
-  /* --- Mouvement et fondu : Les propriétés de transition pour un effet fluide --- */
-  transition: bottom 1.5s cubic-bezier(0.23, 1, 0.32, 1), /* Dure 1.5s, avec un effet d'accélération/décélération doux */
-              opacity 1s ease-in;                     /* Dure 1s, avec un léger délai au début du fondu */
+/* Supprimez ou videz ces règles */
+.timeline-text-content:not(.visible),
+.timeline-text-content.visible {
+  right: 0;
+  opacity: 1;
+  bottom: auto;
 }
 
 /* --- Position INITIALE du texte (quand la classe 'visible' n'est PAS là) --- */
@@ -815,23 +990,17 @@ header {
   margin-bottom: 10px;
 }
 
+
 @media (max-width: 700px) {
-  .timeline {
-    max-width: 98vw;
-    min-height: 100px;
-  }
-  .timeline-float-img {
-    width: 90px;
-    height: 90px;
-    right: -120px;
-    left: auto;
+  .timeline-float-img{
+    width: 140px;
+    height: 140px;
+    left: 0;
+    right: auto;
     top: 5px;
   }
-  .timeline-float-img.visible {
-    right: auto;
-    left: 0;
-  }
 }
+
 
 
 /* propriete de whatsapp slide ajouter a mon site */
@@ -908,6 +1077,72 @@ header {
   .slide img {
     width: 90%;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 8px;
+    gap: 14px;
+  }
+  .intro .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .intro-button {
+    width: 100%;
+    margin-top: 18px;
+  }
+  .intro-btn {
+    width: 100%;
+    font-size: 1em;
+    padding: 12px 0;
+  }
+}
+
+/* === IMAGE TIMELINE OCCUPE TOUTE LA MOITIÉ DROITE === */
+.timeline-float-img {
+  position: absolute;
+  top: 0;
+  right: 0;           /* Colle l'image à droite */
+  left: auto;
+  width: 50%;         /* Prend 50% du parent */
+  height: 100%;       /* Prend toute la hauteur du parent */
+  min-height: 300px;  /* Hauteur minimale pour éviter qu'elle soit trop petite */
+  opacity: 1;
+  z-index: 10;
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: none;
+  object-fit: cover;  /* Remplit tout l'espace sans déformation */
+  transition: none;   /* Pas d'animation */
+}
+
+/* === RESPONSIVE : image plus petite et adaptée sur mobile === */
+@media (max-width: 900px) {
+  .timeline-float-img {
+    position: static;     /* Sort du flux absolu pour s'empiler */
+    width: 100%;
+    height: 220px;
+    min-height: 120px;
+    border-radius: 10px;
+    margin: 0 auto 18px auto;
+    display: block;
+  }
+  .timeline {
+    flex-direction: column;
+    min-height: unset;
+    padding: 30px 8px;
+  }
+  .timeline-text-content {
+    position: static;
+    width: 100%;
+    padding: 12px 4px;
+    margin: 0;
+    top: unset;
+    right: unset;
   }
 }
 
