@@ -1,16 +1,26 @@
 
 
 
-Découvrez la première plateforme congolaise numérique dédiée à l'exploration des hôtels et auberges officiellement reconnus par la Direction Générale du Tourisme et de l’Hôtellerie (DGTH) dans les arrondissements de Poto-Poto et Moungali
+Découvrez la première plateforme congolaise numérique 
+dédiée à l'exploration des hôtels et auberges officiellement 
+reconnus par la Direction Générale du Tourisme et de l’Hôtellerie
+(DGTH) dans les arrondissements de Poto-Poto et Moungali
 
 ______________________
 
-Grâce à des technologies géospatiales avancées (QGIS, QField, SIG) et à un développement web personnalisé, cette plateforme interactive vous permet de :
+Grâce à des technologies géospatiales avancées 
+(QGIS, QField, SIG) et à un développement web personnalisé, 
+cette plateforme interactive vous permet de :
 
 **Visualiser l’emplacement exact des établissements ;
 
-**Consulter leur classification par étoiles, leur capacité d’accueil et les services offerts ;
+**Consulter leur classification par étoiles, 
+leur capacité d’accueil et les services offerts ;
 
-**Explorer le territoire touristique urbain de manière claire, intuitive et actualisée.
+**Explorer le territoire touristique urbain de 
+manière claire, intuitive et actualisée.
 
-Que vous soyez touriste, chercheur, investisseur ou gestionnaire, ce site vous fournit un outil d’aide à la décision pour mieux planifier vos séjours, valoriser le patrimoine local ou optimiser les stratégies de développement touristique.
+
+Que vous soyez touriste, chercheur, investisseur ou gestionnaire, 
+ce site vous fournit un outil d’aide à la décision pour mieux planifier vos séjours, 
+valoriser le patrimoine local ou optimiser les stratégies de développement touristique.
