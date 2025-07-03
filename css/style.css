@@ -338,23 +338,21 @@ body {
 }
 
 
-/* ajout de la deuxieme troisieme section qui contient la carte ainsi que les petite image */
-
+/* propriete de la carte  */
 .map-gallery {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between;
-  gap: 20px;              /* ← Rapproche la carte et le texte */
+  gap: 20px;              
   background: #fff;
-  padding: 40px 30px;     /* ← Ajoute du padding sur les côtés */
+  padding: 40px 30px;     
 }
 
 .map-container {
   flex: 1 1 42%;
   min-width: 200px;
-  max-width: 42%;         /* ← Réduit la largeur pour rapprocher */
-  display: flex;
+  max-width: 42%;         
   align-items: stretch;
 }
 
@@ -394,52 +392,6 @@ body {
   line-height: 1.7;
   margin-left: 0;
 }
-/* propriete pour le footer */
-.site-footer {
-  width : 100%;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.footer-container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.footer-links {
-
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-.footer-social img {
-  width: 32px;      /* Choisis la taille souhaitée, ex : 32px */
-  height: 32px;
-  margin: 0 8px;    /* Espacement horizontal entre les icônes */
-  vertical-align: middle;
-  transition: transform 0.2s;
-}
-
-.footer-social img:hover {
-  transform: scale(1.15); /* Effet zoom au survol, optionnel */
-}
 
 /* propriete de la mini carte */
 .carte iframe {
@@ -449,7 +401,7 @@ body {
   border-radius: 8px;
 }
 
-/* propriete de la deuxieme section nouvelle */
+/* propriete de la section economiser ...  */
 /* ✅ STYLE GLOBAL DU BANDEAU */
 .promo-banner {
   background: #f8f9fa;
@@ -461,7 +413,6 @@ body {
   max-width: 97%; /* largeur du bloc promo réduite pour respirer */
 }
 
-/* ✅ CONTENU INTERNE ALIGNÉ EN LIGNE ET ESPACÉ */
 .promo-content {
   max-width: 850px;
   margin: auto;
@@ -472,8 +423,7 @@ body {
   gap: 10px;
   padding: 16px;
 }
-
-/* ✅ TEXTE À GAUCHE */
+/* BLOC TEXTE À GAUCHE */
 .promo-text {
   flex: 1;                    /* prend toute la largeur dispo à gauche */
   text-align: left;
@@ -481,27 +431,27 @@ body {
 }
 
 
-/* ✅ IMAGE À DROITE */
+/*IMAGE À DROITE */
 .promo-image {
   flex-shrink: 0;             /* empêche de se réduire */
   margin-left: auto;          /* colle l’image à droite */
 }
 
-/* ✅ TITRE DU BLOC PROMO */
+/* TITRE DU BLOC PROMO */
 .promo-text h3 {
   font-size: 1.6rem;
   color: #004e7c;
   margin-bottom: 10px;
 }
 
-/* ✅ SOUS-TITRE */
+/* SOUS-TITRE */
 .promo-text p {
   font-size: 1rem;
   color: #444;
   margin-bottom: 15px;
 }
 
-/* ✅ BOUTON D’ACTION */
+/*BOUTON D’ACTION */
 .promo-btn {
   display: inline-block;
   background: var(--primary-color);
@@ -517,14 +467,14 @@ body {
   cursor: pointer;
 }
 
-/* ✅ HOVER SUR LE BOUTON */
+/* HOVER SUR LE BOUTON */
 .promo-btn:hover {
   background: var(--secondary-color);
   color: var(--primary-color);
   transform: translateY(-2px) scale(1.04);
 }
 
-/* ✅ STYLE DE L’IMAGE */
+/*STYLE DE L’IMAGE */
 .promo-image img {
   width: 104px;
   height: 104px;
@@ -546,7 +496,6 @@ body {
   gap: 20px;
   padding: 0 10px;
 }
-
 /* Lignes d’images */
 .grid-row {
   display: flex;
@@ -554,12 +503,10 @@ body {
   flex-wrap: nowrap;              /* pour que les images restent sur une ligne */
   justify-content: space-between;
 }
-
 /* Images – adaptables selon le nombre */
 .top-row img {
   width: 48%; /* plus large avec marge contrôlée */
 }
-
 .bottom-row img {
   width: 31.5%;
 }
@@ -572,14 +519,13 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* ombre douce */
   transition: transform 0.3s ease;
 }
-
 .grid-row img:hover {
   transform: scale(1.03); /* zoom léger au survol */
 }
 
 
 
-/* propriete du titre avant les 5 images  */
+/* propriete des texte situé avant les 5 images  */
 .image-grid-intro {
   max-width: 960px;
   margin: 0 auto;
@@ -603,42 +549,10 @@ body {
   margin-bottom: 20px;
 }
 
-/* propriete de la section des photos qui vont en auto scrolle vers la gauche */
-.infinite-slider {
-  overflow: hidden;
-  width: 100%;
-  background-color: #fefefe;
-  padding: 20px 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-.slider-track {
-  display: flex;
-  width: calc(250px * 10); /* largeur = largeur img × nb images */
-  animation: scroll-left 30s linear infinite;
-}
-
-.slider-track img {
-  width: 250px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-right: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
 
 
 
-
-
-/* propriete de photos de 4s  */
-/* Container centré et overflow visible pour voir les slides sur les côtés */
-/* Container centré et overflow visible pour voir les slides sur les côtés */
-/* Simple carousel défilement droite vers gauche */
-/* Chronologie verticale façon Apple/WebKit */
-/* Animation image flottante dans la timeline */
+/* propriete du text situé apres les cinq images */
 .timeline {
   position: relative;
   margin: 40px 0;
@@ -654,9 +568,6 @@ body {
   min-height: 400px;        /* Ajuste selon ta hauteur souhaitée */
   position: relative;
 }
-
-/* propriete de l'image qui va  glisser */
-
 .timeline-text-content {
   position: relative;
   top: 50%;
@@ -677,32 +588,17 @@ body {
 /* Styles pour le titre et paragraphe à l'intérieur du texte */
 .timeline-text-content h2,
 .timeline-text-content p {
-  text-align: center; /* Centre aussi les titres et paragraphes */
+  text-align: center; 
 }
 
-/* Supprimez ou videz ces règles */
-/* .timeline-text-content:not(.visible),
-.timeline-text-content.visible {
-  right: 0;
-  opacity: 1;
-  bottom: auto;
-} */
-
-/* --- Position INITIALE du texte (quand la classe 'visible' n'est PAS là) --- */
-/* C'est ce qui le fait "venir du bas" */
 .timeline-text-content:not(.visible) {
-    bottom: -150px; /* Positionne le texte 150px EN DESSOUS de la zone visible de la section.
-                       Ajustez cette valeur pour le cacher complètement. */
+    bottom: -150px; 
 }
-
-
 /* --- Position FINALE du texte (quand la classe 'visible' est ajoutée par JavaScript) --- */
 .timeline-text-content.visible {
-  bottom: 10%; /* Le texte monte et s'arrête à 10% du bas de la section .timeline */
-  opacity: 1;  /* Devient entièrement visible */
+  bottom: 10%; 
+  opacity: 1; 
 }
-
-
 
 /* Styles pour le titre et paragraphe à l'intérieur du texte (inchangés) */
 .timeline-text-content h2 {
@@ -710,7 +606,6 @@ body {
   font-weight: 700;
   margin-bottom: 15px;
 }
-
 .timeline-text-content p {
   font-size: 1.1em;
   line-height: 1.6;
@@ -784,23 +679,85 @@ body {
 .prev { left: 20px; }
 .next { right: 20px; }
 
-/* === IMAGE TIMELINE OCCUPE TOUTE LA MOITIÉ DROITE === */
-.timeline-float-img {
-  position: absolute;
-  top: 0;
-  right: 0;           /* Colle l'image à droite */
-  left: auto;
-  width: 50%;         /* Prend 50% du parent */
-  height: 100%;       /* Prend toute la hauteur du parent */
-  min-height: 300px;  /* Hauteur minimale pour éviter qu'elle soit trop petite */
-  opacity: 1;
-  z-index: 10;
-  background: transparent;
-  border-radius: 10px;
-  box-shadow: none;
-  object-fit: cover;  /* Remplit tout l'espace sans déformation */
-  transition: none;   /* Pas d'animation */
+
+
+
+
+/* propriete de la section des photos qui vont en auto scrolle vers la gauche */
+.infinite-slider {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fefefe;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 10); /* largeur = largeur img × nb images */
+  animation: scroll-left 30s linear infinite;
+}
+
+.slider-track img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+
+
+/* propriete pour le footer */
+.site-footer {
+  width : 100%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-links {
+
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-social img {
+  width: 32px;      /* Choisis la taille souhaitée, ex : 32px */
+  height: 32px;
+  margin: 0 8px;    /* Espacement horizontal entre les icônes */
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.15); /* Effet zoom au survol, optionnel */
+}
+
 
 
 
@@ -954,6 +911,36 @@ body {
     height: 330px;
   }
 }
+
+
+
+/* Responsive : footer adapté pour mobile */
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 20px 6px;
+    font-size: 0.95em;
+    text-align: center;
+  }
+  .footer-container {
+    max-width: 100vw;
+    padding: 0;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  .footer-social img {
+    width: 28px;
+    height: 28px;
+    margin: 0 4px;
+  }
+}
+
+
+
 /* media qui concerne la section de la mini carte pour une taille differente */
 @media (max-width: 900px) {
   .map-gallery {
