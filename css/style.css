@@ -889,32 +889,55 @@ body {
   }
 }
 /* media qui concerne la section de la mini carte  */
-@media (max-width: 900px) {
-  .map-gallery {
-    flex-direction: column;
-    gap: 20px;
+/* media query pour le footer : assure que le texte s'adapte à tous les écrans */
+@media (max-width: 600px) {
+  .site-footer {
     padding: 20px 6px;
+    font-size: 0.95em;
+    text-align: center;
+    word-break: break-word;         /* Coupe les mots trop longs */
+    overflow-wrap: break-word;      /* Coupe aussi les liens longs */
   }
-  .map-container,
-  .map-side-text {
-    max-width: 100%;
+  .footer-container {
+    max-width: 100vw;
+    padding: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0;
+    margin: 10px 0 0 0;
     width: 100%;
-    min-width: unset;
-    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
   }
-  .map-side-text {
-    padding: 18px 8px;
-    font-size: 1em;
-    min-height: 180px;
+  .footer-links a {
+    display: inline-block;
+    max-width: 95vw;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
-  .carte {
-    height: 330px;
+  .footer-social img {
+    width: 28px;
+    height: 28px;
+    margin: 0 4px;
+  }
+  .footer-social p {
+    max-width: 98vw;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin: 6px auto;
+    text-align: center;
   }
 }
 
 
 
-/* Responsive : footer adapté pour mobile */
+/*media query pour le footer */
 @media (max-width: 600px) {
   .site-footer {
     padding: 20px 6px;
