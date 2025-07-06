@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
         <link rel="icon" href="/image/R_2.jpeg" type="image/x-icon">
@@ -134,21 +134,34 @@
         </section>
         <!-- cette section est  concerne les cinq photos avant la mini carte-->
 
-        <div class="image-grid">
-            <div class="image-grid-intro">
-                <h2>Nos hébergements en lumière</h2>
-                <p>Découvrez une sélection chaleureuse d’établissements pour vos séjours à Brazzaville.</p>
-            </div>
-            <div class="grid-row top-row">
+       <div class="image-grid">
+          <div class="image-grid-intro">
+            <h2>Nos hébergements en lumière</h2>
+            <p>Découvrez une sélection chaleureuse d’établissements pour vos séjours à Brazzaville.</p>
+          </div>
+          <div class="grid-row">
+            <div class="img-overlay-container">
               <img src="/image/pefaco/expedia_group-3070200-19f538-521850.jpg" alt="Image 1">
-              <img src="/image/safir/hotel-saphir.jpg" alt="Image 2">
+              <div class="img-overlay-text">HOTEL PEFACO</div>
             </div>
-            <div class="grid-row bottom-row">
+            <div class="img-overlay-container">
+              <img src="/image/safir/hotel-saphir.jpg" alt="Image 2">
+              <div class="img-overlay-text">Hotel saphir</div>
+            </div>
+            <div class="img-overlay-container">
               <img src="/image/mikhel/caption.jpg" alt="Image 3">
+              <div class="img-overlay-text">Hotel mikhel</div>
+            </div>
+            <div class="img-overlay-container">
               <img src="/image/pefaco/espace-mbongui-compose.jpg" alt="Image 4">
+              <div class="img-overlay-text">Pefaco hotel</div>
+            </div>
+            <div class="img-overlay-container">
               <img src="/image/radisson/feu-des-saveurs.jpg" alt="Image 5">
+              <div class="img-overlay-text">Hotel radisson</div>
             </div>
           </div>
+        </div>
 
 
 
